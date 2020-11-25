@@ -6,5 +6,16 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: process.env.DEPLOY_URL
+          ? "https://strapi-setup-tutorial.uk.r.appspot.com"
+          : `http://localhost:1337`,
+        contentTypes: ["blogs", "user"],
+        queryLimit: 1000,
+      },
+    },
+  ],
 }
