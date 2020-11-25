@@ -4,7 +4,9 @@ export default function Home() {
   return (
     <div>
       Hello world!
-      <p>This Site is automatically built with github netlify actions</p>
+      <p>
+        This Site is automatically built with Gatsby, WIll test webhooks now
+      </p>
     </div>
   )
 }
