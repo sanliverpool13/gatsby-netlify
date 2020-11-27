@@ -28,7 +28,7 @@ jobs:
       - name: Build the site
         run: |
           npm install --production
-          npm run build
+          npm run productionbuild
 
       - name: Deploy To Netlify
         uses: nwtgck/actions-netlify@v1.1.11
