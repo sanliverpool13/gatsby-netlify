@@ -30,10 +30,10 @@ jobs:
           npm install --production
           npm build
 
-      - name: Deploy TO Netlify
+      - name: Deploy To Netlify
         uses: nwtgck/actions-netlify@v1.1.11
         with:
-          publish-dir: 'public'
+          publish-dir: './public'
           production-branch: main
 
         env:
