@@ -1,12 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+console.log(process.env.NODE_ENV)
+
 export default function Home({
   data: {
-    allStrapiBlogs: { nodes: blogs },
+    allStrapiWorks: { nodes: works },
   },
 }) {
-  const { title, content } = blogs[0]
+  const { title, content } = works[0]
   return (
     <div>
       {title}
@@ -18,7 +20,7 @@ export default function Home({
 
 export const query = graphql`
   {
-    allStrapiBlogs {
+    allStrapiWorks {
       nodes {
         id
         slug
