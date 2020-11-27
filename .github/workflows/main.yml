@@ -27,8 +27,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build the site
         run: |
-          npm install --production
-          npm build
+          yarn install --production
+          yarn build
 
       - name: Deploy TO Netlify
         uses: nwtgck/actions-netlify@v1.1.3
