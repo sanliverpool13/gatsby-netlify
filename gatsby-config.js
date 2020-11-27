@@ -10,9 +10,10 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.DEPLOY_URL
-          ? "https://strapi-setup-tutorial.uk.r.appspot.com"
-          : `http://localhost:1337`,
+        apiURL:
+          process.env.NODE_ENV === "production"
+            ? "https://strapi-setup-tutorial.uk.r.appspot.com"
+            : `http://localhost:1337`,
         contentTypes: [`blogs`, `works`],
         queryLimit: 1000,
       },
