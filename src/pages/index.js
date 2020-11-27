@@ -1,12 +1,30 @@
 import React from "react"
+import { graphql } from "gatsby"
 
-export default function Home() {
+export default function Home({
+  data: {
+    allStrapiBlogs: { nodes: blogs },
+  },
+}) {
+  const { title, content } = blogs[0]
   return (
     <div>
-      Hello world!
-      <p>
-        This Site is automatically built with Gatsby, WIll test webhooks now
-      </p>
+      {title}
+      <p>{content}</p>
+      <p>Hello there</p>
     </div>
   )
 }
+
+export const query = graphql`
+  {
+    allStrapiBlogs {
+      nodes {
+        id
+        slug
+        title
+        content
+      }
+    }
+  }
+`
