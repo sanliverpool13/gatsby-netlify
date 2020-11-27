@@ -24,11 +24,11 @@ jobs:
         with:
           version: 12.x
 
-      # Runs a set of commands using the runners shell
-      - name: Build the site
-        run: |
-          npm install --production
-          npm build
+#       # Runs a set of commands using the runners shell
+#       - name: Build the site
+#         run: |
+#           npm install --production
+#           npm build
 
       - name: Deploy TO Netlify
         uses: nwtgck/actions-netlify@v1.1.11
